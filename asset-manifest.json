@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/SD-0224/Heba-Alii-React-App/static/css/main.dd84fb22.css",
+    "main.js": "/SD-0224/Heba-Alii-React-App/static/js/main.9acd6cf8.js",
+    "static/media/star-filled.svg": "/SD-0224/Heba-Alii-React-App/static/media/star-filled.2acf68fcfff88c425b97.svg",
+    "static/media/star-notfill.svg": "/SD-0224/Heba-Alii-React-App/static/media/star-notfill.484f58c82a2634d76140.svg",
+    "static/media/heart-defult.svg": "/SD-0224/Heba-Alii-React-App/static/media/heart-defult.e34a758e63e5c1584a50.svg",
+    "static/media/white-heart.svg": "/SD-0224/Heba-Alii-React-App/static/media/white-heart.c03734466c822dc3f408.svg",
+    "static/media/circle-checked.svg": "/SD-0224/Heba-Alii-React-App/static/media/circle-checked.ab9f9aed6bbf0374d3c9.svg",
+    "static/media/white-moon.svg": "/SD-0224/Heba-Alii-React-App/static/media/white-moon.3533dcafa82fd3e152d4.svg",
+    "static/media/red-heart.svg": "/SD-0224/Heba-Alii-React-App/static/media/red-heart.012eba04273b6bc16cd7ed8ec893e26b.svg",
+    "static/media/search-dark.svg": "/SD-0224/Heba-Alii-React-App/static/media/search-dark.f1e8b6d3225221b337ee.svg",
+    "static/media/moon-defult.svg": "/SD-0224/Heba-Alii-React-App/static/media/moon-defult.d62db0c8ed1028878fe3.svg",
+    "index.html": "/SD-0224/Heba-Alii-React-App/index.html",
+    "static/media/search-defult.svg": "/SD-0224/Heba-Alii-React-App/static/media/search-defult.01da7b90b09620b3b6c6.svg",
+    "main.dd84fb22.css.map": "/SD-0224/Heba-Alii-React-App/static/css/main.dd84fb22.css.map",
+    "main.9acd6cf8.js.map": "/SD-0224/Heba-Alii-React-App/static/js/main.9acd6cf8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd84fb22.css",
+    "static/js/main.9acd6cf8.js"
+  ]
+}
