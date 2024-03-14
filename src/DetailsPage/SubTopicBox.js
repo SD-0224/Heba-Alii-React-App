@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/SubTopicBox.css";
 export default function SubTopicsBox({ topic, subtopicsData }) {
   return (
     <>
