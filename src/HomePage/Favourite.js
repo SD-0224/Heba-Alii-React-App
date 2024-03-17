@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import RatingStars from "./Rating";
+import RatingStars from "../Ratings/Rating";
 
-import "../styles/Favourite.css";
+import styles from "../HomePage/Favourite.module.css";
 
 export default function Favourit() {
   // console.log("hey heba ");
@@ -18,10 +18,9 @@ export default function Favourit() {
       {/* <button id="headerButtons" onClick={toggleFavourite}>
         Favourite
       </button> */}
-      <div id="favourit" className="favourit-section">
-        {/* i'm adding here */}
-        <p className="favourit-section-paragraph">My Favourit Topics</p>
-        <div className="faviourit-courses container"></div>
+      <div id="favourit" className={styles.FavouritSection}>
+        <p className={styles.FavouritSectionParagraph}>My Favourit Topics</p>
+        <div className={styles.FavouritCourses}></div>
       </div>
       {/* {favouriteVisible && (
         <div className="favourite-container">

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import RatingStars from "./Rating";
+import RatingStars from "../Ratings/Rating";
 import { Link, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "../styles/MainHome.css";
+import styles from "../HomePage/MainHome.module.css";
 import SearchBar from "./Search";
 
 export default function MainHome() {
@@ -117,20 +117,20 @@ export default function MainHome() {
     return result.map((item) => (
       <div
         key={item.id}
-        className="courseBox"
+        className={styles.CourseBox}
         onClick={() => handleClickDEtails(item.id)}
       >
         <img
-          src={`./Logos/${item.image}`}
-          className="courses-img"
+          src={`/Logos/${item.image}`}
+          className={styles.CoursesImg}
           alt={item.topic}
         />
-        <div className="course-Box-Content-container">
-          <p className="category-container">{item.category}</p>
-          <h4 className="topic-container">{item.topic}</h4>
+        <div className={styles.CourseBoxContentContainer}>
+          <p className={styles.CategoryContainer}>{item.category}</p>
+          <h4 className={styles.TopicContainer}>{item.topic}</h4>
           {/* <h4 className={`topic-${item.id}`}>{item.topic}</h4> */}
           <RatingStars numStars={5} />
-          <p className="auther-name">Author: {item.name}</p>
+          <p className={styles.AutherName}>Author: {item.name}</p>
         </div>
       </div>
     ));
@@ -139,9 +139,8 @@ export default function MainHome() {
   return (
     <>
       <SearchBar />
-      <div className="courses-container container">
-        {addContent(contentData)}
-      </div>
+      <div className={styles.CoursesContainer}>{addContent(contentData)}</div>
     </>
   );
 }
+//<div className="courses-container container">

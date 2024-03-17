@@ -1,0 +1,18 @@
+.HederButtons {
+  background-color: var(--bg_default);
+  color: var(--body-text);
+  border-radius: 6px;
+  border: 1.5px solid var(--lines-color);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  height: 30px;
+  gap: 0.2rem;
+  /* width: 125px; */
+}
+
+@media (max-width: 650px) {
+  .HederButtons {
+    text-indent: -9999px;
+  }
+}

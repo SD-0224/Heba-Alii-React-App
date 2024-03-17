@@ -1,0 +1,13 @@
+.Footer {
+  background-color: var(--bg_body);
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.FooterIcon {
+  margin-left: 3px;
+  margin-right: 3px;
+  /* background-repeat: no-repeat;
+    background-image: url(./Icons/red-heart.svg); */
+}

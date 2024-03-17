@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import RatingStars from "../HomePage/Rating";
-import "../styles/Details.css";
+import RatingStars from "../Ratings/Rating";
+import styles from "../DetailsPage/Details.module.css";
 // import { useParams } from "react-router";
 import {
   Routes,
@@ -46,32 +46,40 @@ function DetailsPage() {
   }, [id]);
   return (
     <>
-      <div className="main">
-        <div className="details-box">
-          <div className="details-content container-details">
-            <p className="category">{cardData.category}</p>
-            <h1 className="topic">{cardData.topic}</h1>
-            <div className="rating">
+      <div className={styles.main}>
+        <div className={styles.DetailsBox}>
+          <div
+            className={`${styles.DetailsContent} ${styles.ContainerDetails}`}
+          >
+            {/* <div className="details-content container-details"> */}
+            <p className={styles.Category}>{cardData.category}</p>
+            <h1 className={styles.Topic}>{cardData.topic}</h1>
+            <div className={styles.Rating}>
               <RatingStars numStars={5} />
             </div>
-            <p className="description">{cardData.description}</p>
+            <p className={styles.Description}>{cardData.description}</p>
           </div>
         </div>
-        <div className="aside-boxraber">
-          <div className="aside-box">
-            <img src={`./logos/${cardData.image}`} className="details-image" />
-            <p className="auother">
-              by: <span className="bolded">{cardData.name}</span>
+        <div className={styles.AsideBoxRaber}>
+          <div className={styles.AsideBox}>
+            <img
+              src={`/logos/${cardData.image}`}
+              className={styles.DetailsImage}
+            />
+            <p className={styles.Auother}>
+              by: <span className={styles.Bolded}>{cardData.name}</span>
             </p>
-            <div className="aside-small-box">
-              <p className="intrested-pag">Intrested about this topic?</p>
+            <div className={styles.AsideSmallBox}>
+              <p className={styles.IntrestedParag}>
+                Intrested about this topic?
+              </p>
               <button
-                className="add-to-favorites"
+                className={styles.AddToFavourit}
                 // onClick={() => addRemoveFavourite(cardData)}
               >
                 ADD To Favourite
               </button>
-              <p className="unlimited-parag">Unlimited Credits</p>
+              <p className={styles.UnlimitedParag}>Unlimited Credits</p>
             </div>
           </div>
         </div>

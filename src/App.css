@@ -53,9 +53,9 @@ body {
   font-family: "Nunito Sans", sans-serif;
   background-color: var(--bg_default);
 }
-.container {
+/* .container {
   margin-inline: 35px;
-}
+} */
 
 .body-container {
   background-color: var(--bg_body);

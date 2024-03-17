@@ -1,0 +1,22 @@
+.Star {
+  background-image: url(../Icons/star-filled.svg);
+  display: block;
+  width: 17px;
+  height: 17px;
+  margin-top: 1px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.StarNotChecked {
+  background-image: url(../Icons/star-notfill.svg);
+  display: block;
+  width: 17px;
+  height: 17px;
+  margin-top: 1px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.Rating {
+  display: flex;
+}

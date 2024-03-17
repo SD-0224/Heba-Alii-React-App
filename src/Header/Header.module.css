@@ -1,0 +1,43 @@
+.HederRaber {
+  display: flex;
+  flex-direction: column;
+}
+
+.HederNavigator {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .head-raber {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* .header-navigater {
+  display: flex;
+  justify-content: space-between;
+} */
+.WebTobics {
+  color: var(--brand-primary);
+}
+
+/* .web-tobics {
+  color: var(--brand-primary);
+} */
+
+.HederButtonsContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.Container {
+  margin-inline: 35px;
+}
+/* .header-buttons-container {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+} */
+
+/* @media (max-width: 650px) {
+} */

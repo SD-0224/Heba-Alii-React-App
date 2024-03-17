@@ -1,15 +1,16 @@
 // import { useState, useEffect, useRef } from "react";
-import "../styles/Search.css";
+// import "../styles/Search.css";
+import styles from "../HomePage/Search.module.css";
 
 export default function SearchBar() {
   return (
     <>
-      <div className="search-bar container">
+      <div className={styles.SearchBar}>
         {/* typo */}
-        <div className="search-input">
-          <span className="mode-icon-search" />
+        <div className={styles.SearchInput}>
+          <span className={styles.ModeIconSearch} />
           <input
-            className="search-box"
+            className={styles.SearchBox}
             type="text"
             id="search-input"
             placeholder="Search the website.."
@@ -18,13 +19,14 @@ export default function SearchBar() {
             // onChange={searchInputChange}
           />
         </div>
-        <div className="search-box-buttons">
+        <div className={styles.SearchBoxButtons}>
           {/* {sortBy(sortSelectValue)} */}
-          <div className="sort-select">
+          <div className={styles.SortSelect}>
             <label htmlFor="sort">Sort by:</label>
             <select
               name="sort"
               id="sort"
+              className={styles.SortPointer}
               //   value={sortSelectValue}
               //   onChange={handleSortChange}
             >
@@ -33,11 +35,12 @@ export default function SearchBar() {
               <option value="Author">Author Name</option>
             </select>
           </div>
-          <div className="filter-select">
+          <div className={styles.FilterSelect}>
             <label htmlFor="filter">Filter by:</label>
             <select
               name="filter"
               id="filter"
+              className={styles.FilterPointer}
               //   value={filterSelectValue}
               //   onChange={handleFilterChange}
             >
