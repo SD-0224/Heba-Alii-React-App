@@ -1,5 +1,5 @@
 .Star {
-  background-image: url(../Icons/star-filled.svg);
+  background-image: url(/public/Icons/star-filled.svg);
   display: block;
   width: 17px;
   height: 17px;
@@ -9,7 +9,7 @@
 }
 
 .StarNotChecked {
-  background-image: url(../Icons/star-notfill.svg);
+  background-image: url(/public/Icons/star-notfill.svg);
   display: block;
   width: 17px;
   height: 17px;

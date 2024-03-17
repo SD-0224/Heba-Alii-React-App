@@ -24,7 +24,7 @@
   margin-block: 15px;
 }
 .CircleChecked {
-  background-image: url(../Icons/circle-checked.svg);
+  background-image: url(/public/Icons/circle-checked.svg);
   display: block;
   width: 19px;
   height: 17px;
@@ -43,19 +43,19 @@
 }
 
 @media (max-width: 700px) {
-  .container-details {
+  .ContainerDetails {
     margin-inline: 20px;
   }
-  .container-details {
+  /* .container-details {
     margin-inline: 10px;
-  }
-  .subtopics-box {
+  } */
+  .SubtopicsBox {
     font-size: medium;
   }
 }
 
 @media (min-width: 700px) and (max-width: 900px) {
-  .container-details {
+  .ContainerDetails {
     margin-inline: 20px;
   }
 }

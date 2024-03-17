@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RatingStars from "../Ratings/Rating";
+import RatingStars from "../SharedComponent/Ratings/Rating";
 import styles from "../DetailsPage/Details.module.css";
 // import { useParams } from "react-router";
 import {
@@ -63,7 +63,7 @@ function DetailsPage() {
         <div className={styles.AsideBoxRaber}>
           <div className={styles.AsideBox}>
             <img
-              src={`../logos/${cardData.image}`}
+              src={`/logos/${cardData.image}`}
               className={styles.DetailsImage}
             />
             <p className={styles.Auother}>

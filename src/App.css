@@ -9,9 +9,9 @@
   --body-text: #333333;
   --heart-color: #dc143c;
   --box-shadow: #00000033;
-  --bg-image: url("./Icons/moon-defult.svg");
-  --bg-image-heart: url("./Icons/heart-defult.svg");
-  --bg-image-search: url("./Icons/search-defult.svg");
+  --bg-image: url("/public/Icons/moon-defult.svg");
+  --bg-image-heart: url("/public/Icons/heart-defult.svg");
+  --bg-image-search: url("/public/Icons/search-defult.svg");
 }
 .dark-mode {
   background-color: black;
@@ -23,9 +23,9 @@
   --lines-color: #000000;
   --body-text: #ededed;
   --heart-color: #dc143c;
-  --bg-image: url("./Icons/white-moon.svg");
-  --bg-image-heart: url("./Icons/white-heart.svg");
-  --bg-image-search: url("./Icons/search-dark.svg");
+  --bg-image: url("/public/Icons/white-moon.svg");
+  --bg-image-heart: url("/public/Icons/white-heart.svg");
+  --bg-image-search: url("/public/Icons/search-dark.svg");
 }
 #loading_indicator {
   /* position: relative; */
@@ -53,17 +53,14 @@ body {
   font-family: "Nunito Sans", sans-serif;
   background-color: var(--bg_default);
 }
-/* .container {
-  margin-inline: 35px;
-} */
 
 .body-container {
   background-color: var(--bg_body);
   padding-top: 5px;
 }
 
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
   .container {
     margin-inline: 20px;
   }
-}
+} */

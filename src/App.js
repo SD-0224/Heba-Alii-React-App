@@ -4,7 +4,7 @@ import DetailsPage from "./DetailsPage/Details";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
-import Favourit from "./HomePage/Favourite";
+import Favourit from "./SharedComponent/Favourite";
 
 function App() {
   return (

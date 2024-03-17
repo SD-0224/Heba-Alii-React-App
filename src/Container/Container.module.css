@@ -1,3 +1,9 @@
 .Container {
   margin-inline: 35px;
 }
+
+@media (max-width: 650px) {
+  .container {
+    margin-inline: 20px;
+  }
+}
