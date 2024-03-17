@@ -63,7 +63,7 @@ function DetailsPage() {
         <div className={styles.AsideBoxRaber}>
           <div className={styles.AsideBox}>
             <img
-              src={`/logos/${cardData.image}`}
+              src={`../logos/${cardData.image}`}
               className={styles.DetailsImage}
             />
             <p className={styles.Auother}>
