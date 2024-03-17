@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Heba-Alii-React-App/static/css/main.3e2c2abc.css",
-    "main.js": "/Heba-Alii-React-App/static/js/main.ef03e73a.js",
+    "main.js": "/Heba-Alii-React-App/static/js/main.1b505e57.js",
     "static/media/star-filled.svg": "/Heba-Alii-React-App/static/media/star-filled.2acf68fcfff88c425b97.svg",
     "static/media/star-notfill.svg": "/Heba-Alii-React-App/static/media/star-notfill.484f58c82a2634d76140.svg",
     "static/media/heart-defult.svg": "/Heba-Alii-React-App/static/media/heart-defult.e34a758e63e5c1584a50.svg",
@@ -13,10 +13,10 @@
     "static/media/moon-defult.svg": "/Heba-Alii-React-App/static/media/moon-defult.d62db0c8ed1028878fe3.svg",
     "static/media/search-defult.svg": "/Heba-Alii-React-App/static/media/search-defult.01da7b90b09620b3b6c6.svg",
     "main.3e2c2abc.css.map": "/Heba-Alii-React-App/static/css/main.3e2c2abc.css.map",
-    "main.ef03e73a.js.map": "/Heba-Alii-React-App/static/js/main.ef03e73a.js.map"
+    "main.1b505e57.js.map": "/Heba-Alii-React-App/static/js/main.1b505e57.js.map"
   },
   "entrypoints": [
     "static/css/main.3e2c2abc.css",
-    "static/js/main.ef03e73a.js"
+    "static/js/main.1b505e57.js"
   ]
 }
