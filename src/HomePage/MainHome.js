@@ -121,7 +121,7 @@ export default function MainHome() {
         onClick={() => handleClickDEtails(item.id)}
       >
         <img
-          src={require(`../../public/logos/${item.image}`)}
+          src={require(`../assets/logos/${item.image}`)}
           className={styles.CoursesImg}
           alt={item.topic}
         />

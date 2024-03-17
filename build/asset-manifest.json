@@ -1,7 +1,44 @@
 {
   "files": {
     "main.css": "/Heba-Alii-React-App/static/css/main.3e2c2abc.css",
-    "main.js": "/Heba-Alii-React-App/static/js/main.1b505e57.js",
+    "main.js": "/Heba-Alii-React-App/static/js/main.bb688d06.js",
+    "static/media/analytics.png": "/Heba-Alii-React-App/static/media/analytics.7e81c6ec23532162f2ea.png",
+    "static/media/angular.png": "/Heba-Alii-React-App/static/media/angular.fe7fe0b7dad8f1ba6bbd.png",
+    "static/media/graphql.png": "/Heba-Alii-React-App/static/media/graphql.94da3de726a7948a2b53.png",
+    "static/media/testing.jpeg": "/Heba-Alii-React-App/static/media/testing.ad94e782676fdecaaf79.jpeg",
+    "static/media/nosql.png": "/Heba-Alii-React-App/static/media/nosql.a199339446f951a20c40.png",
+    "static/media/web-security.jpeg": "/Heba-Alii-React-App/static/media/web-security.9e48583f22afd886198b.jpeg",
+    "static/media/accessibility.png": "/Heba-Alii-React-App/static/media/accessibility.c75a654fb11dfaaed074.png",
+    "static/media/seo.jpeg": "/Heba-Alii-React-App/static/media/seo.ce353a14256c565ed930.jpeg",
+    "static/media/oauth.png": "/Heba-Alii-React-App/static/media/oauth.1abf79c292bc04b74985.png",
+    "static/media/jquery.png": "/Heba-Alii-React-App/static/media/jquery.fb91f03a257b8dd5ed89.png",
+    "static/media/wai.jpeg": "/Heba-Alii-React-App/static/media/wai.62fb80ae5ba6754266ec.jpeg",
+    "static/media/flask.webp": "/Heba-Alii-React-App/static/media/flask.e9aa7ddff47d2b9ecfd7.webp",
+    "static/media/responsive.gif": "/Heba-Alii-React-App/static/media/responsive.bcb585dc2b7710147abf.gif",
+    "static/media/websockets.png": "/Heba-Alii-React-App/static/media/websockets.848b23e090906ee25620.png",
+    "static/media/ci-cd.jpeg": "/Heba-Alii-React-App/static/media/ci-cd.d9a75d7087106331fa75.jpeg",
+    "static/media/ajax.gif": "/Heba-Alii-React-App/static/media/ajax.64a0d43eb2ad030c3992.gif",
+    "static/media/microservices.png": "/Heba-Alii-React-App/static/media/microservices.1429863d1fc54d25de50.png",
+    "static/media/cms.png": "/Heba-Alii-React-App/static/media/cms.91f57a8a42da0c521ea7.png",
+    "static/media/javascript.jpg": "/Heba-Alii-React-App/static/media/javascript.b705d60b6e799174a90e.jpg",
+    "static/media/ruby.jpeg": "/Heba-Alii-React-App/static/media/ruby.32daf416c3be7dbd36d2.jpeg",
+    "static/media/vuejs.jpeg": "/Heba-Alii-React-App/static/media/vuejs.cd186b35ba219739bd93.jpeg",
+    "static/media/Screenshot 2024-02-07 at 3.13.26 PM-Photoroom (1).png": "/Heba-Alii-React-App/static/media/Screenshot 2024-02-07 at 3.13.26 PM-Photoroom (1).2c13e68f290b57161661.png",
+    "static/media/django.jpeg": "/Heba-Alii-React-App/static/media/django.77dd482b651a05afca29.jpeg",
+    "static/media/cross-browser.jpeg": "/Heba-Alii-React-App/static/media/cross-browser.6b3f4c47884ca8175f93.jpeg",
+    "static/media/performance.png": "/Heba-Alii-React-App/static/media/performance.a5afeb25d823c575a7fb.png",
+    "static/media/ux.jpeg": "/Heba-Alii-React-App/static/media/ux.9227becf073621783f3c.jpeg",
+    "static/media/html.png": "/Heba-Alii-React-App/static/media/html.c173306012e5b8703ee8.png",
+    "static/media/devops.png": "/Heba-Alii-React-App/static/media/devops.276c721c4f74ba976659.png",
+    "static/media/design-systems.jpeg": "/Heba-Alii-React-App/static/media/design-systems.c1355f0e274d600b2f68.jpeg",
+    "static/media/sql.png": "/Heba-Alii-React-App/static/media/sql.fe8124a4f12303d0e81d.png",
+    "static/media/restapi.jpeg": "/Heba-Alii-React-App/static/media/restapi.925c8cba603d7000aee3.jpeg",
+    "static/media/cloud.jpeg": "/Heba-Alii-React-App/static/media/cloud.720aa3d9da383b2e40c6.jpeg",
+    "static/media/css.webp": "/Heba-Alii-React-App/static/media/css.3f22046b6f3f86cac104.webp",
+    "static/media/nodejs.webp": "/Heba-Alii-React-App/static/media/nodejs.d3ed9e9eba918614f33d.webp",
+    "static/media/ui.png": "/Heba-Alii-React-App/static/media/ui.b5f357ee7d27dad8fd3b.png",
+    "static/media/expressjs.webp": "/Heba-Alii-React-App/static/media/expressjs.2ae1dc58f7c5318ca228.webp",
+    "static/media/react.webp": "/Heba-Alii-React-App/static/media/react.55afe679a76823cdda39.webp",
     "static/media/star-filled.svg": "/Heba-Alii-React-App/static/media/star-filled.2acf68fcfff88c425b97.svg",
     "static/media/star-notfill.svg": "/Heba-Alii-React-App/static/media/star-notfill.484f58c82a2634d76140.svg",
     "static/media/heart-defult.svg": "/Heba-Alii-React-App/static/media/heart-defult.e34a758e63e5c1584a50.svg",
@@ -13,10 +50,10 @@
     "static/media/moon-defult.svg": "/Heba-Alii-React-App/static/media/moon-defult.d62db0c8ed1028878fe3.svg",
     "static/media/search-defult.svg": "/Heba-Alii-React-App/static/media/search-defult.01da7b90b09620b3b6c6.svg",
     "main.3e2c2abc.css.map": "/Heba-Alii-React-App/static/css/main.3e2c2abc.css.map",
-    "main.1b505e57.js.map": "/Heba-Alii-React-App/static/js/main.1b505e57.js.map"
+    "main.bb688d06.js.map": "/Heba-Alii-React-App/static/js/main.bb688d06.js.map"
   },
   "entrypoints": [
     "static/css/main.3e2c2abc.css",
-    "static/js/main.1b505e57.js"
+    "static/js/main.bb688d06.js"
   ]
 }
