@@ -1,6 +1,6 @@
-import Header from "../Header/Header";
+import Header from "../SharedComponent/Header/Header";
 import MainHome from "./MainHome";
-import Footer from "../Footer/Footer";
+import Footer from "../SharedComponent/Footer/Footer";
 import LayoutContainer from "../Container/Container";
 export default function Home() {
   return (

@@ -4,9 +4,13 @@ export default function Footer() {
   return (
     <>
       <footer className={styles.Footer}>
-        <p>Developed with</p>
+        <p className={styles.Footer}>
+          Developed with
+          <ion-icon name="heart" class={styles.FooterIcon}></ion-icon>© 2024{" "}
+        </p>
+        {/* <ion-icon name="heart"></ion-icon> */}
         {/* <img className={styles.FooterIcon} src={logo} alt="red-heart-icon" /> */}
-        <p> © 2024</p>
+        {/* <p> © 2024</p> */}
       </footer>
     </>
   );

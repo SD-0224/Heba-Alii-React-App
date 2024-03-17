@@ -2,8 +2,8 @@ import "./App.css";
 import Home from "./HomePage/Home";
 import DetailsPage from "./DetailsPage/Details";
 import { Routes, Route } from "react-router-dom";
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
+import Footer from "./SharedComponent/Footer/Footer";
+import Header from "./SharedComponent/Header/Header";
 import Favourit from "./SharedComponent/Favourite";
 
 function App() {

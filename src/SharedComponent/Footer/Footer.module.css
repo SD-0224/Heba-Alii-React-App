@@ -5,10 +5,14 @@
   font-size: 15px;
 }
 
-.FooterIcon {
+/* .FooterIcon {
   margin-left: 3px;
   margin-right: 3px;
   /* background-image: url(/public/Icons/red-heart.svg);
   background-repeat: no-repeat;
 } */
+
+.FooterIcon {
+  color: red;
+  font-size: 20px;
 }

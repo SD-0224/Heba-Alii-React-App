@@ -2,8 +2,8 @@ import DarkeMode from "./DarkModeButton";
 import FavouriteButton from "./FavouriteButton";
 import SubHeader from "./SubHeader";
 import styles from "../Header/Header.module.css";
-import LayoutContainer from "../Container/Container";
-import Buttons from "../Buttons";
+import LayoutContainer from "../../Container/Container";
+import Buttons from "../../Buttons";
 // import Favourit from "../HomePage/Favourite";
 
 export default function Header(isDarkMode) {

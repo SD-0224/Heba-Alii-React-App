@@ -1,4 +1,4 @@
-import "../styles/HeaderButtons.css";
+// import "../styles/HeaderButtons.css";
 
 export default function FavouritButton() {
   return (
