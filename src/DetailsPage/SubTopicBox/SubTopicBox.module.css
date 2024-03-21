@@ -8,15 +8,10 @@
   background-color: var(--bg_default);
   border: 1px solid var(--lines-color);
 }
-.ContainerDetails {
-  margin-inline: 25%;
-}
+
 .SubtopicsHead {
   display: flex;
   width: 100%;
-  /* height: 15%; */
-  /* margin-top: 0px;
-    margin-bottom: 0px; */
   align-items: center;
   margin-left: 25px;
   font-weight: 700;
@@ -43,19 +38,7 @@
 }
 
 @media (max-width: 700px) {
-  .ContainerDetails {
-    margin-inline: 20px;
-  }
-  /* .container-details {
-    margin-inline: 10px;
-  } */
   .SubtopicsBox {
     font-size: medium;
-  }
-}
-
-@media (min-width: 700px) and (max-width: 900px) {
-  .ContainerDetails {
-    margin-inline: 20px;
   }
 }

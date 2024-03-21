@@ -1,0 +1,15 @@
+.ContainerDetails {
+  margin-inline: 25%;
+}
+
+@media (max-width: 700px) {
+  .ContainerDetails {
+    margin-inline: 20px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  .ContainerDetails {
+    margin-inline: 20px;
+  }
+}

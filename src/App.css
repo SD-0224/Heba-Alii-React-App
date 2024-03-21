@@ -58,9 +58,3 @@ body {
   background-color: var(--bg_body);
   padding-top: 5px;
 }
-
-/* @media (max-width: 650px) {
-  .container {
-    margin-inline: 20px;
-  }
-} */

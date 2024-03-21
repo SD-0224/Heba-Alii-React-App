@@ -1,70 +1,57 @@
 // import { useState, useEffect, useRef } from "react";
 // import "../styles/Search.css";
-import styles from "../HomePage/Search.module.css";
+// import styles from "../HomePage/Search.module.css";
+// import DropeDown from "./DropDown/DropDown";
 
-export default function SearchBar() {
-  return (
-    <>
-      <div className={styles.SearchBar}>
-        {/* typo */}
-        <div className={styles.SearchInput}>
-          <span className={styles.ModeIconSearch} />
-          <input
-            className={styles.SearchBox}
-            type="text"
-            id="search-input"
-            placeholder="Search the website.."
-            name="search"
-            // value={searchInputValue}
-            // onChange={searchInputChange}
-          />
-        </div>
-        <div className={styles.SearchBoxButtons}>
-          {/* {sortBy(sortSelectValue)} */}
-          <div className={styles.SortSelect}>
-            <label htmlFor="sort">Sort by:</label>
-            <select
-              name="sort"
-              id="sort"
-              className={styles.SortPointer}
-              //   value={sortSelectValue}
-              //   onChange={handleSortChange}
-            >
-              <option value="defult">Default</option>
-              <option value="Topic">Topic Title</option>
-              <option value="Author">Author Name</option>
-            </select>
-          </div>
-          <div className={styles.FilterSelect}>
-            <label htmlFor="filter">Filter by:</label>
-            <select
-              name="filter"
-              id="filter"
-              className={styles.FilterPointer}
-              //   value={filterSelectValue}
-              //   onChange={handleFilterChange}
-            >
-              <option value="defult">Default</option>
-              <option value="Web Development Languages">
-                Web Development Languages
-              </option>
-              <option value="Frontend Frameworks and Libraries">
-                Frontend Frameworks and Libraries
-              </option>
-              <option value="Backend Frameworks and Libraries">
-                Backend Frameworks and Libraries
-              </option>
-              <option value="Databases and APIs">Databases and APIs</option>
-              <option value="Web Development Concepts and Technologies">
-                Web Development Concepts and Technologies
-              </option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+// export default function SearchBar({ onInputChange }) {
+//   return (
+//     <>
+//       <div className={styles.SearchBar}>
+//         {/* typo */}
+//         <div className={styles.SearchInput}>
+//           <span className={styles.ModeIconSearch} />
+//           <input
+//             className={styles.SearchBox}
+//             type="text"
+//             id="search-input"
+//             placeholder="Search the website.."
+//             name="search"
+//             // value={searchInputValue}
+//             onChange={onInputChange}
+//           />
+//         </div>
+
+//         <div className={styles.SearchBoxButtons}>
+//           <DropeDown
+//             ClassSelect={"SortSelect"}
+//             label={"Sort by"}
+//             htmlFor={"sort"}
+//             id={"sort"}
+//             name={"sort"}
+//             ClassPointer={"SortPointer"}
+//             options={["Defult", "Topic", "Auother"]}
+//           />
+//           <DropeDown
+//             ClassSelect={"FilterSelect"}
+//             label={"Filter by:"}
+//             htmlFor={"filter"}
+//             id={"filter"}
+//             name={"filter"}
+//             ClassPointer={"FilterPointer"}
+//             options={[
+//               "Default",
+//               "Web Development Languages",
+//               "Frontend Frameworks and Libraries",
+//               " Backend Frameworks and Libraries",
+//               "Databases and APIs",
+//               "Web Development Concepts and Technologies",
+//             ]}
+//           />
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
 
 // function Search({ result }) {
 //   const [searcgInputValue, setSearchInputValue] = useState("");
@@ -149,3 +136,48 @@ export default function SearchBar() {
 // }
 
 // export default Search;
+
+{
+  /* {sortBy(sortSelectValue)} */
+}
+{
+  /* <div className={styles.SortSelect}>
+            <label htmlFor="sort">Sort by:</label>
+            <select
+              name="sort"
+              id="sort"
+              className={styles.SortPointer}
+              //   value={sortSelectValue}
+              //   onChange={handleSortChange}
+            >
+              <option value="defult">Default</option>
+              <option value="Topic">Topic Title</option>
+              <option value="Author">Author Name</option>
+            </select>
+          </div>
+          <div className={styles.FilterSelect}>
+            <label htmlFor="filter">Filter by:</label>
+            <select
+              name="filter"
+              id="filter"
+              className={styles.FilterPointer}
+              //   value={filterSelectValue}
+              //   onChange={handleFilterChange}
+            >
+              <option value="defult">Default</option>
+              <option value="Web Development Languages">
+                Web Development Languages
+              </option>
+              <option value="Frontend Frameworks and Libraries">
+                Frontend Frameworks and Libraries
+              </option>
+              <option value="Backend Frameworks and Libraries">
+                Backend Frameworks and Libraries
+              </option>
+              <option value="Databases and APIs">Databases and APIs</option>
+              <option value="Web Development Concepts and Technologies">
+                Web Development Concepts and Technologies
+              </option>
+            </select>
+          </div> */
+}

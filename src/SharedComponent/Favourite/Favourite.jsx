@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import RatingStars from "./Ratings/Rating";
-
-import styles from "../SharedComponent/Favourite.module.css";
+import RatingStars from "../Ratings/Rating";
+import styles from "../Favourite/Favourite.module.css";
 
 export default function Favourit() {
   // console.log("hey heba ");

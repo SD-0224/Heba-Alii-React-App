@@ -1,0 +1,64 @@
+.SearchBar {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+}
+.ModeIconSearch {
+  background-image: var(--bg-image-search);
+  width: 30px;
+  height: 22px;
+  margin-top: 1px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 15px;
+  bottom: 16px;
+}
+.SearchInput {
+  display: flex;
+  width: 100%;
+}
+
+.SearchBox {
+  color: var(--body-text);
+  padding-left: 50px;
+  width: 100%;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 0 solid var(--lines-color);
+  box-shadow: 0px 0px 4px var(--box-shadow);
+  background-color: var(--bg_default);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.SearchBoxButtons {
+  display: flex;
+  font-size: small;
+}
+
+@media (max-width: 650px) {
+  .SearchBar {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 27px;
+    margin-left: 35px;
+  }
+  .ModeIconSearch {
+    bottom: 70px;
+  }
+  .SearchBox {
+    width: 100%;
+    height: 50px;
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .SearchBoxButtons {
+    width: 100%;
+  }
+}

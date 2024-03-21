@@ -1,6 +1,4 @@
-import Header from "../SharedComponent/Header/Header";
-import MainHome from "./MainHome";
-import Footer from "../SharedComponent/Footer/Footer";
+import MainHome from "./MainHome/MainHome";
 import LayoutContainer from "../Container/Container";
 export default function Home() {
   return (
@@ -8,7 +6,7 @@ export default function Home() {
       <main>
         <div className="body-container">
           <LayoutContainer>
-            <h2 className="container ">"24" Web Topics Found</h2>
+            <h2>"24" Web Topics Found</h2>
             {/* <div id="loading_indicator"> </div> */}
             <MainHome />
           </LayoutContainer>

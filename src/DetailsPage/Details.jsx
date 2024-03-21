@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from "react";
-import RatingStars from "../SharedComponent/Ratings/Rating";
 import styles from "../DetailsPage/Details.module.css";
+import DetailsBox from "./DetailBox/DetailsBox";
 // import { useParams } from "react-router";
-import {
-  Routes,
-  Route,
-  useSearchParams,
-  BrowserRouter,
-} from "react-router-dom";
-import SubTopicsBox from "./SubTopicBox";
+import { useSearchParams } from "react-router-dom";
+import SubTopicsBox from "./SubTopicBox/SubTopicBox";
 
 function DetailsPage() {
   const [queryParameters] = useSearchParams();
   const id = queryParameters.get("id");
-  // console.log("id", id);
   const [cardData, setCardData] = useState({});
   const [subtopicsData, setSubtopicsData] = useState([]);
-  // console.log("heba hi");
 
   useEffect(() => {
     async function fetchTopicDetails(id) {
@@ -32,7 +25,6 @@ function DetailsPage() {
         const data = await response.json();
         setSubtopicsData(data.subtopics);
         setCardData(data);
-        // console.log("cardData", data);
       } catch (error) {
         console.error("Error fetching topic details:", error);
       }
@@ -40,26 +32,13 @@ function DetailsPage() {
 
     fetchTopicDetails(id);
 
-    // console.log("data", cardData);
-    // Cleanup function
     return () => {};
   }, [id]);
+
   return (
     <>
       <div className={styles.main}>
-        <div className={styles.DetailsBox}>
-          <div
-            className={`${styles.DetailsContent} ${styles.ContainerDetails}`}
-          >
-            {/* <div className="details-content container-details"> */}
-            <p className={styles.Category}>{cardData.category}</p>
-            <h1 className={styles.Topic}>{cardData.topic}</h1>
-            <div className={styles.Rating}>
-              <RatingStars numStars={5} />
-            </div>
-            <p className={styles.Description}>{cardData.description}</p>
-          </div>
-        </div>
+        <DetailsBox cardData={cardData} />
         <div className={styles.AsideBoxRaber}>
           <div className={styles.AsideBox}>
             <img

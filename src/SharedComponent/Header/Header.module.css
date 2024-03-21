@@ -8,22 +8,9 @@
   justify-content: space-between;
 }
 
-/* .head-raber {
-  display: flex;
-  flex-direction: column;
-} */
-
-/* .header-navigater {
-  display: flex;
-  justify-content: space-between;
-} */
 .WebTobics {
   color: var(--brand-primary);
 }
-
-/* .web-tobics {
-  color: var(--brand-primary);
-} */
 
 .HederButtonsContainer {
   display: flex;

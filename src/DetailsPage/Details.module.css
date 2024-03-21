@@ -1,33 +1,3 @@
-.ContainerDetails {
-  margin-inline: 25%;
-}
-.DetailsBox {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  /* height: 275px; */
-  background-color: #333232;
-  color: white;
-}
-.DetailsContent {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.Category {
-  color: var(--brand-secondary);
-  padding-top: 25px;
-  margin-bottom: 0;
-}
-.Description {
-  display: flex;
-  padding-bottom: 50px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-right: 160px;
-}
 .Topic {
   margin-top: 0;
   margin-bottom: 0;
@@ -112,18 +82,6 @@
   margin-right: 5px;
 }
 @media (max-width: 700px) {
-  .Description {
-    max-width: 100%;
-    padding-bottom: 50px;
-    margin-right: 0px;
-  }
-  .ContainerDetails {
-    margin-inline: 20px;
-  }
-  .container-details {
-    margin-inline: 10px;
-  }
-
   .AsideBox {
     background-color: var(--bg_body);
     padding-top: 0px;
@@ -155,9 +113,7 @@
   .Description {
     margin-right: 300px;
   }
-  .ContainerDetails {
-    margin-inline: 20px;
-  }
+
   .AsideBox {
     width: 250px;
     position: absolute;
