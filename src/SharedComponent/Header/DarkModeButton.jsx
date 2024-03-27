@@ -1,33 +1,31 @@
 // import "../styles/HeaderButtons.css";
 
-import React, { useState, useEffect } from "react";
-function DarkeMode() {
+import React, { createContext, useState, useContext, useEffect } from "react";
+
+const DarkModeContext = createContext();
+
+export const DarkModeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+
   useEffect(() => {
-    const darkMode = localStorage.getItem("darkMode");
-    setIsDarkMode(darkMode === true);
+    const darkMode = localStorage.getItem("darkMode") === "true";
+    setIsDarkMode(darkMode);
   }, []);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
+
   useEffect(() => {
     document.body.classList.toggle("dark-mode", isDarkMode);
     localStorage.setItem("darkMode", isDarkMode);
   }, [isDarkMode]);
 
   return (
-    <>
-      <button
-        id="toggle-button"
-        className="header-buttons"
-        onClick={toggleDarkMode}
-      >
-        <span id="mode-icon" className="mode-icon-moon"></span>
-        {isDarkMode ? "Light Mode" : "Dark Mode"}
-      </button>
-    </>
+    <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+      {children}
+    </DarkModeContext.Provider>
   );
-}
+};
 
-export default DarkeMode;
+export const useDarkMode = () => useContext(DarkModeContext);

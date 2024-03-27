@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styles from "../DetailsPage/Details.module.css";
 import DetailsBox from "./DetailBox/DetailsBox";
-// import { useParams } from "react-router";
 import { useSearchParams } from "react-router-dom";
 import SubTopicsBox from "./SubTopicBox/SubTopicBox";
+import { useFavouriteContext } from "../SharedComponent/FavouriteContext";
+import { AsideBox } from "./AsideBox/AsideBox";
 
 function DetailsPage() {
   const [queryParameters] = useSearchParams();
   const id = queryParameters.get("id");
   const [cardData, setCardData] = useState({});
   const [subtopicsData, setSubtopicsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { favouriteCards, setFavouriteCards } = useFavouriteContext();
 
   useEffect(() => {
     async function fetchTopicDetails(id) {
@@ -22,11 +25,15 @@ function DetailsPage() {
             "Something went wrong. Web topic details failed to load."
           );
         }
+
         const data = await response.json();
+
         setSubtopicsData(data.subtopics);
         setCardData(data);
       } catch (error) {
         console.error("Error fetching topic details:", error);
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -35,36 +42,38 @@ function DetailsPage() {
     return () => {};
   }, [id]);
 
+  const isFavourite = favouriteCards.some((elm) => elm.id === cardData.id);
+
+  const handleAddRemoveFavorite = () => {
+    if (isFavourite) {
+      const updatedCards = favouriteCards.filter(
+        (elm) => elm.id !== cardData.id
+      );
+      setFavouriteCards(updatedCards);
+      localStorage.setItem("MyFavourite", JSON.stringify(updatedCards));
+    } else {
+      const updatedCards = favouriteCards.concat(cardData);
+      setFavouriteCards(updatedCards);
+      localStorage.setItem("MyFavourite", JSON.stringify(updatedCards));
+    }
+  };
+
   return (
     <>
-      <div className={styles.main}>
-        <DetailsBox cardData={cardData} />
-        <div className={styles.AsideBoxRaber}>
-          <div className={styles.AsideBox}>
-            <img
-              src={`./logos/${cardData.image}`}
-              // src={require(`../assets/logos/${cardData.image}`)}
-              className={styles.DetailsImage}
-            />
-            <p className={styles.Auother}>
-              by: <span className={styles.Bolded}>{cardData.name}</span>
-            </p>
-            <div className={styles.AsideSmallBox}>
-              <p className={styles.IntrestedParag}>
-                Intrested about this topic?
-              </p>
-              <button
-                className={styles.AddToFavourit}
-                // onClick={() => addRemoveFavourite(cardData)}
-              >
-                ADD To Favourite
-              </button>
-              <p className={styles.UnlimitedParag}>Unlimited Credits</p>
-            </div>
-          </div>
+      {loading ? (
+        <div id="loading_indicator"></div>
+      ) : (
+        <div className={styles.main}>
+          <DetailsBox cardData={cardData} />
+          <AsideBox
+            cardData={cardData}
+            id="remove-button"
+            onClick={handleAddRemoveFavorite}
+            label={isFavourite ? "Remove from Favorites" : "Add to Favorites"}
+          />
+          <SubTopicsBox topic={cardData.topic} subtopicsData={subtopicsData} />
         </div>
-        <SubTopicsBox topic={cardData.topic} subtopicsData={subtopicsData} />
-      </div>
+      )}
     </>
   );
 }

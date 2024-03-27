@@ -1,5 +1,5 @@
 // import "../styles/SubHeader.css";
-import styles from "../Header/SubHeder.module.css";
+import styles from "../../Header/SubHeader/SubHeder.module.css";
 
 export default function SubHeader() {
   return (

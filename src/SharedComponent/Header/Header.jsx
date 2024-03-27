@@ -1,12 +1,14 @@
-import DarkeMode from "./DarkModeButton";
-import FavouriteButton from "./FavouriteButton";
-import SubHeader from "./SubHeader";
+import SubHeader from "../Header/SubHeader/SubHeader";
 import styles from "../Header/Header.module.css";
 import LayoutContainer from "../../Container/Container";
 import Buttons from "../../Buttons";
-// import Favourit from "../HomePage/Favourite";
+import { useDarkMode } from "../Header/DarkModeButton";
+import { useFavouriteContext } from "../FavouriteContext";
 
-export default function Header(isDarkMode) {
+export default function Header() {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { toggleFavouriteVisibility } = useFavouriteContext();
+
   return (
     <>
       <header className={styles.HederRaber}>
@@ -14,39 +16,21 @@ export default function Header(isDarkMode) {
           <nav className={styles.HederNavigator}>
             <h4 className={styles.WebTobics}>Web Topics</h4>
             <div className={styles.HederButtonsContainer}>
-              <Buttons icon={"moon-outline"} label={"Dark Mode"}></Buttons>
+              <Buttons
+                icon={"moon-outline"}
+                label={isDarkMode ? " Light Mode" : " Dark Mode"}
+                onClick={toggleDarkMode}
+              ></Buttons>
               <Buttons
                 icon={"heart-outline"}
                 label={"Favourit"}
-                onClick={() => console.log("clicked")}
+                onClick={toggleFavouriteVisibility}
               ></Buttons>
-
-              {/* <button
-                // id="toggle-button"
-                className="header-buttons"
-                // onClick={toggleDarkMode}
-              >
-                <ion-icon name="moon-outline"></ion-icon>
-                DarkMode
-              </button>
-              <button
-                // id="toggle-button"
-                className="header-buttons"
-                // onClick={toggleDarkMode}
-              >
-                <ion-icon name="heart-outline"></ion-icon>
-                DarkMode
-              </button> */}
-
-              {/* <DarkeMode />
-              <FavouriteButton /> */}
             </div>
           </nav>
         </LayoutContainer>
-
         <SubHeader />
       </header>
     </>
   );
 }
-// <div className="header-buttons-container container">

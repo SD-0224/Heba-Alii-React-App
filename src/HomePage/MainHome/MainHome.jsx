@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
-import SearchBar from "../Search";
+import React, { useState, useEffect } from "react";
 import AddCourses from "../AddingCourses/Courses";
 import DropeDown from "../DropDown/DropDown";
 import styles from "../MainHome/MainHome.module.css";
+import SearchInput from "../SearchInput/SearchInput";
 
 export default function MainHome() {
   const [contentData, setContentData] = useState([]);
   const [searchInputValue, setSearchInputValue] = useState("");
-  const debouncedHandleSearch = useRef(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,38 +22,50 @@ export default function MainHome() {
         setContentData(result);
       } catch (error) {
         console.log(error);
+      } finally {
+        // Hide loading indicator after fetching data
+        setLoading(false);
       }
     };
     fetchData();
     return () => {};
   }, []);
 
-  //Debounce
-  const debounce = (func, delay) => {
-    let timeoutId;
-    return function () {
-      const context = this;
-      const args = arguments;
+  //debounce
+  // function debounce(func, delay) {
+  //   let timeoutId;
+  //   return function () {
+  //     const context = this;
+  //     const args = arguments;
 
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        func.apply(context, args);
-      }, delay);
-    };
-  };
+  //     clearTimeout(timeoutId);
+  //     timeoutId = setTimeout(() => {
+  //       func.apply(context, args);
+  //     }, delay);
+  //   };
+  // }
 
   //search input
   useEffect(() => {
-    debouncedHandleSearch.current = debounce(() => {
-      fetch(
-        `https://tap-web-1.herokuapp.com/topics/list?phrase=${searchInputValue}`
-      )
-        .then((response) => response.json())
-        .then((result) => {
-          setContentData(result);
-        });
-    }, 300);
+    const ApiSearch = `https://tap-web-1.herokuapp.com/topics/list?phrase=${searchInputValue}`;
+
+    const fetchDataAsync = async () => {
+      try {
+        const response = await fetch(ApiSearch);
+        const result = await response.json();
+        setContentData(result);
+      } catch (error) {
+        console.log("Something went wrong. Web topics failed to load.");
+      } finally {
+      }
+    };
+    const debounce = setTimeout(fetchDataAsync, 300);
+    return () => clearTimeout(debounce);
   }, [searchInputValue]);
+
+  const handleInputChange = (event) => {
+    setSearchInputValue(event.target.value);
+  };
 
   //sort function
   const sortBy = (value) => {
@@ -87,15 +99,9 @@ export default function MainHome() {
     setContentData(filteredData);
   };
 
-  function searchInputChange(event) {
-    setSearchInputValue(event.target.value);
-    debouncedHandleSearch.current();
-  }
-
   const handleSortChange = (event) => {
     const value = event.target.value;
     // setSortSelectValue(value);
-    console.log(value);
     sortBy(value);
   };
   const handleFilterChange = (event) => {
@@ -107,18 +113,16 @@ export default function MainHome() {
   return (
     <>
       <div className={styles.SearchBar}>
-        <div className={styles.SearchInput}>
-          <span className={styles.ModeIconSearch} />
-          <input
-            className={styles.SearchBox}
-            type="text"
-            id="search-input"
-            placeholder="Search the website.."
-            name="search"
-            value={searchInputValue}
-            onChange={searchInputChange}
-          />
-        </div>
+        <SearchInput
+          className={styles.SearchBox}
+          type="text"
+          id="search-input"
+          placeholder="Search the website.."
+          name="search"
+          value={searchInputValue}
+          onChange={handleInputChange}
+        />
+
         <div className={styles.SearchBoxButtons}>
           <DropeDown
             classes={{ container: "SortSelect", pointer: "SortPointer" }}
@@ -143,8 +147,13 @@ export default function MainHome() {
           />
         </div>
       </div>
-      {/* <SearchBar onInputChange={searchInputChange} /> */}
-      <AddCourses contentData={contentData} />
+      <h2>"24" Web Topics Found</h2>
+
+      {loading ? (
+        <div id="loading_indicator"></div>
+      ) : (
+        <AddCourses contentData={contentData} />
+      )}
     </>
   );
 }

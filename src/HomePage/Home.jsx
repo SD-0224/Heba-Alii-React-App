@@ -6,8 +6,6 @@ export default function Home() {
       <main>
         <div className="body-container">
           <LayoutContainer>
-            <h2>"24" Web Topics Found</h2>
-            {/* <div id="loading_indicator"> </div> */}
             <MainHome />
           </LayoutContainer>
         </div>
