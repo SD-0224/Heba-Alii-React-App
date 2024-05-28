@@ -56,7 +56,6 @@ export default function MainHome() {
         setContentData(result);
       } catch (error) {
         console.log("Something went wrong. Web topics failed to load.");
-      } finally {
       }
     };
     const debounce = setTimeout(fetchDataAsync, 300);
